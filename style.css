@@ -1,0 +1,145 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+h1
+{
+	font-size:80px;
+}
+
+header .logo {
+    font-size: 30px;
+	font-family:Lucida Handwriting;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    font-family:Comic Sans MS;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.hero, .about, .services, .contact {
+    padding: 150px 20px;
+    text-align: center;
+    opacity: 0;
+	background: #f4f4f4;
+    transform: translateY(10px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* Ensure the sticky class will trigger animations */
+.sticky.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.hero {
+    
+}
+
+.hero h1, .hero p {
+    animation: fadeIn 2s;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    animation: bounce 5s infinite;
+}
+
+.about img {
+    width: 200px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.service-item {
+    margin: 20px 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form label {
+    margin: 10px 0 5px;
+}
+
+form input, form textarea {
+    width: 100%;
+    max-width: 500px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+form button {
+    padding: 10px 20px;
+    background: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: auto;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 2;
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
